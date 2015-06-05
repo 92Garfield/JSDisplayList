@@ -1,1 +1,13 @@
-# JSDisplayList  initgit add README.mdgit commit -m "first commit"git remote add origin https://github.com/92Garfield/JSDisplayList.gitgit push -u origin master
+# JSDisplayList  
+
+TODO:
+	DisplayObject
+		applyFilter
+	Events
+		onClick
+		onMouseDown
+		onMouseUp
+		onMouseMove
+	Class to draw images
+		scale
+		crop

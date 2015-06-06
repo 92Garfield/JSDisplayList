@@ -1,15 +1,15 @@
 # JSDisplayList  
 
 TODO:
-	DisplayObject
-		applyFilter
-	Events
-		onClick
-		onMouseDown
-		onMouseUp
-		onMouseMove
-	Text class improvements
-		font
-		size
-        Comments
-            DOImage Class
+    DisplayObject
+        applyFilter
+    Events
+        onClick
+        onMouseDown
+        onMouseUp
+        onMouseMove
+    Text class improvements
+        font
+        size
+    Comments
+        DOImage Class

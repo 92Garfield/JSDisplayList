@@ -14,8 +14,10 @@ function init() {
     var txt = new Text();
     txt.y = 20;
     txt.x = 2;
-    stage.addChild(txt);
+    stage.ad
+    dot.y = 100;dChild(txt);
     txt.t = new Date();
+    
     var dot = new Disk();
     dot.y = 100;
     dot.x = 100;
@@ -25,5 +27,10 @@ function init() {
        var delta = t1.getTime() - this.t.getTime();
        this.text = Math.round((1 / delta) * 1000) + ' fps';
        this.t = t1;
-    } 
+    }
+    
+    var img = new DOImage("QP.BMP");
+    img.x = 200;
+    img.y = 100;
+    stage.addChild(img);
 }

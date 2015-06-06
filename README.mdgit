@@ -11,3 +11,6 @@ TODO:
 	Class to draw images
 		scale
 		crop
+	Text class improvements
+		font
+		size

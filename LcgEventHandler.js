@@ -13,7 +13,7 @@ function LcgEventHandler() {
 	this.dispatchEvent = function(eventObject) {
 
 		var callbacks = this.events[eventObject[0]];
-		if (callbacks.length == 0) return false;
+		if (!callbacks || callbacks.length == 0) return false;
 
 		for(var i = 0, l = callbacks.length; i < l; i++) {
 			callbacks[i](eventObject[1]);

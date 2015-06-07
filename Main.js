@@ -35,5 +35,4 @@ function init() {
     stage.addChild(img);
 
     img.addEventListener('LCG_EVENT_CLICK', function(e) {console.log("SUCCESS"); console.log(e);});
-    document.getElementById("stage").addEventListener('click', stage.eventClick);
 }

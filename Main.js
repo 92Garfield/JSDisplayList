@@ -12,14 +12,14 @@ function init() {
     var ganttCanvas = document.getElementById('stage');
     var stage = new LcgStage(ganttCanvas);
     var txt = new LcgText();
-    txt.y = 20;
     txt.x = 2;
+    txt.y = 20;
     stage.addChild(txt);
     txt.t = new Date();
 
     var dot = new LcgDisk();
-    dot.y = 100;
     dot.x = 100;
+    dot.y = 100;
     stage.addChild(dot);
 
     txt.onEnterFrame = function () {
@@ -34,6 +34,6 @@ function init() {
     img.y = 100;
     stage.addChild(img);
 
-    img.addEventListener('LCG_EVENT_CLICK', function(e) {console.log(e.clientX); console.log(e.clientY);});
+    img.addEventListener('LCG_EVENT_CLICK', function(e) {console.log("SUCCESS"); console.log(e);});
     document.getElementById("stage").addEventListener('click', stage.eventClick);
 }

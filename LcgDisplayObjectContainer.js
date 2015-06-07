@@ -170,12 +170,12 @@ function LcgDisplayObjectContainer() {
     };
 
 
-    this.eventDispatcher =  function (e, offsetX, offsetY) {
-
-        console.log(e);
+    this.eventDispatcher =  function (event, offsetX, offsetY) {
 
         var newOffsetX = offsetX + this.x;
         var newOffsetY = offsetY + this.y;
+
+        //console.log(newOffsetX);
 
         // DFS over the children of this container
         // in reverse order since the latest children are always 
@@ -183,30 +183,29 @@ function LcgDisplayObjectContainer() {
  
         for (var i=displayList.length-1; i >= 0; i--) {
 
-            var ret = displayList[i].eventDispatcher(e, newOffsetX, newOffsetY);
+            var ret = displayList[i].eventDispatcher(event, newOffsetX, newOffsetY);
 
             // checks if there was an object that handled the event in the subtree of displayList[i]
             if (ret)
                 return ret;
         }
 
+        console.log(event[1].clientX);
+        console.log(newOffsetX);
 
         // if the event is in range of this object's bounding box
-        if ( (e.clientX >= newOffsetX && e.clientX <= newOffsetX+this.width) && 
-             (e.clientY >= newOffsetY && e.clientY <= newOffsetY+this.height) )
-            if (this.dispatchEvent(e))
+        if ( (event[1].clientX >= newOffsetX && event[1].clientX <= newOffsetX+this.width) && 
+             (event[1].clientY >= newOffsetY && event[1].clientY <= newOffsetY+this.height) )
+        {
+
+            if (this.dispatchEvent(event))
                 return this;
+        }
 
         return null;
 
     };
 }
-
-
-/*
-var LCG_EVENT_CLICK = new Event('LCG_EVENT_CLICK', { 'e': {clientX : 0, clientY : 0} });
-img.eventDispatcher(LCG_EVENT_CLICK, 0, 0);
-*/
 
 
 

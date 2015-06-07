@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 function LcgText() {
-  DisplayObjectContainer.call(this);
+  LcgDisplayObjectContainer.call(this);
   this.text = '';
   /**
 		* Overloaded draw function, draws this.text on the screen

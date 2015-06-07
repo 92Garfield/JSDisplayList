@@ -1,5 +1,5 @@
 function LcgImage(path) {
-    DisplayObjectContainer.call(this);
+    LcgDisplayObjectContainer.call(this);
 
     var _this = this;
 

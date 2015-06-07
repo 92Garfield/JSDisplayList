@@ -4,7 +4,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 function LcgStage(canvas) {
-  DisplayObjectContainer.call(this);
+  LcgDisplayObjectContainer.call(this);
   var frameRate = 60;
   var g = canvas.getContext('2d');
   var _this = this;

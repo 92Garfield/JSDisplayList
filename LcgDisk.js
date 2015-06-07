@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 function LcgDisk() {
-    DisplayObjectContainer.call(this);
+    LcgDisplayObjectContainer.call(this);
     this.radius = 4;
     this.color = 'black';
     /**

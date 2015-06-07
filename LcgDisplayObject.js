@@ -5,7 +5,8 @@
 
 function LcgDisplayObject() {
 
-    EventTarget.call(this);
+
+    LcgEventHandler.call(this);
 
     // the coordinates of the top left corner of the object
     this.x = 0;

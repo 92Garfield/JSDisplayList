@@ -11,8 +11,7 @@ function LcgDisplayObjectContainer() {
 
     // Children of this DisplayObjectContainer whose draw method it will call every frame
     // Typically all of them should be of type DisplayObject
-    var displayList = [
-    ];
+    var displayList = [];
 
 
     /**
@@ -30,7 +29,7 @@ function LcgDisplayObjectContainer() {
             }
         }
         return -1;
-    }
+    };
 
     /**
     * @public
@@ -50,7 +49,7 @@ function LcgDisplayObjectContainer() {
             }
         }
         return false;
-    }
+    };
 
     /**
      * @public
@@ -60,7 +59,7 @@ function LcgDisplayObjectContainer() {
      */
     this.addChild = function (displayObject) {
 
-        if (!this.findChild(displayObject))
+        if (this.findChild(displayObject))
             return false;
 
         displayList.push(displayObject);
@@ -79,7 +78,7 @@ function LcgDisplayObjectContainer() {
         if (index < 0)
             return false;
 
-        if (!this.findChild(displayObject))
+        if (this.findChild(displayObject))
             return false;
 
         if (index < dlLength) {
@@ -89,7 +88,7 @@ function LcgDisplayObjectContainer() {
             displayList.push(displayObject);
         }
         return true;
-    }
+    };
 
     /**
      * @public
@@ -106,7 +105,7 @@ function LcgDisplayObjectContainer() {
             return true;
         }
         return false;
-    }
+    };
 
     /**
      * @public
@@ -122,7 +121,7 @@ function LcgDisplayObjectContainer() {
         else {
             return true;
         }
-    }
+    };
 
     /**
      * @public
@@ -138,7 +137,7 @@ function LcgDisplayObjectContainer() {
         else {
             return displayList[index];
         }
-    }
+    };
 
     /**
      * @public
@@ -148,7 +147,7 @@ function LcgDisplayObjectContainer() {
     this.getNumChildren = function () {
 
         return displayList.length;
-    }
+    };
 
     /**
      * @public
@@ -168,10 +167,12 @@ function LcgDisplayObjectContainer() {
             displayList[i].draw(g, offsetX, offsetY, this.alpha*alph);
             displayList[i].drawChildren(g, offsetX + displayList[i].x, offsetY + displayList[i].y, this.alpha*alph);
         }
-    }
+    };
 
 
     this.eventDispatcher =  function (e, offsetX, offsetY) {
+
+        console.log(e);
 
         var newOffsetX = offsetX + this.x;
         var newOffsetY = offsetY + this.y;
@@ -186,20 +187,19 @@ function LcgDisplayObjectContainer() {
 
             // checks if there was an object that handled the event in the subtree of displayList[i]
             if (ret)
-                    return ret;
+                return ret;
         }
 
 
         // if the event is in range of this object's bounding box
         if ( (e.clientX >= newOffsetX && e.clientX <= newOffsetX+this.width) && 
              (e.clientY >= newOffsetY && e.clientY <= newOffsetY+this.height) )
-
             if (this.dispatchEvent(e))
                 return this;
 
         return null;
 
-    }
+    };
 }
 
 

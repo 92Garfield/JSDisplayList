@@ -2,7 +2,7 @@
 // Disk drawing class, inherits from DisplayObjectContainer
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-function Disk() {
+function LcgDisk() {
     DisplayObjectContainer.call(this);
     this.radius = 4;
     this.color = 'black';

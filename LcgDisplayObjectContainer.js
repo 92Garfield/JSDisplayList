@@ -190,8 +190,6 @@ function LcgDisplayObjectContainer() {
                 return ret;
         }
 
-        console.log(event[1].clientX);
-        console.log(newOffsetX);
 
         // if the event is in range of this object's bounding box
         if ( (event[1].clientX >= newOffsetX && event[1].clientX <= newOffsetX+this.width) && 

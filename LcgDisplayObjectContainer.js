@@ -3,7 +3,7 @@
 // Basically a DisplayObject with children
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-function DisplayObjectContainer() {
+function LcgDisplayObjectContainer() {
   DisplayObject.call(this);
   // Children of this DisplayObjectContainer whose draw method it will call every frame
   // Typically all of them should be of type DisplayObject

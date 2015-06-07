@@ -2,7 +2,7 @@
 // Text Drawing Class, inherits from DisplayObjectContainer
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-function Text() {
+function LcgText() {
   DisplayObjectContainer.call(this);
   this.text = '';
   /**

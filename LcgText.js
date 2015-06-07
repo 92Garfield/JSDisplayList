@@ -11,9 +11,9 @@ function LcgText() {
     /**
      * Overloaded draw function, draws this.text on the screen
      *
-     * @param 	{g} 		The canvas context that will draw the text
-     * @param 	{offsetX} 	The X coordinate of the drawn text
-     * @param 	{offsetY} 	The Y coordinate of the drawn text
+     * @param 	{CanvasRenderingContext2D}  g The canvas context that will draw the text
+     * @param 	{int}                       offsetX The X coordinate of the drawn text
+     * @param 	{int}                       offsetY The Y coordinate of the drawn text
      * @return 	{}
      */
     this.draw = function (g, offsetX, offsetY) {

@@ -14,8 +14,8 @@ function init() {
     var txt = new Text();
     txt.y = 20;
     txt.x = 2;
-    stage.ad
-    dot.y = 100;dChild(txt);
+    stage.addChild(txt);
+    dot.y = 100;
     txt.t = new Date();
     
     var dot = new Disk();

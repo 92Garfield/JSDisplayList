@@ -15,7 +15,6 @@ function init() {
     txt.y = 20;
     txt.x = 2;
     stage.addChild(txt);
-    dot.y = 100;
     txt.t = new Date();
     
     var dot = new LcgDisk();
@@ -27,7 +26,7 @@ function init() {
        var delta = t1.getTime() - this.t.getTime();
        this.text = Math.round((1 / delta) * 1000) + ' fps';
        this.t = t1;
-    }
+    };
     
     var img = new LcgImage("QP.BMP");
     img.x = 200;

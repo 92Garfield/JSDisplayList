@@ -24,5 +24,5 @@ function LcgDisk() {
         g.fill();
         g.fillStyle = this.color;
         g.stroke();
-    }
+    };
 }

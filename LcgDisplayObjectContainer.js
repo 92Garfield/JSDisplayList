@@ -203,6 +203,10 @@ function LcgDisplayObjectContainer() {
 }
 
 
+/*
+var LCG_EVENT_CLICK = new Event('LCG_EVENT_CLICK', { 'e': {clientX : 0, clientY : 0} });
+img.eventDispatcher(LCG_EVENT_CLICK, 0, 0);
+*/
 
 
 

@@ -3,7 +3,7 @@
 // The root DisplayObjectContainer that contains the main loop that draws all objects in the scene periodically
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-function Stage(canvas) {
+function LcgStage(canvas) {
   DisplayObjectContainer.call(this);
   var frameRate = 60;
   var g = canvas.getContext('2d');

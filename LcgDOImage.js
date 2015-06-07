@@ -1,4 +1,4 @@
-function DOImage(path) {
+function LcgDoImage(path) {
     DisplayObjectContainer.call(this);
 
     var _this = this;

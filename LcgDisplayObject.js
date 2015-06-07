@@ -3,7 +3,7 @@
 // Basically a DisplayObjectContainer without children
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-function DisplayObject() {
+function LcgDisplayObject() {
     this.x = 0;
     this.y = 0;
     /**

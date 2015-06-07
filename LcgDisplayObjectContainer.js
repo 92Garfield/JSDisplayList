@@ -18,7 +18,7 @@ function LcgDisplayObjectContainer() {
      * @private
      * Searches for a DisplayObject in the displayList
      * @param   {DisplayObject} displayObject that will be searched for
-     * @return  {int}       The index of the DisplayObject if found, or -1 otherwise
+     * @return  {int}           The index of the DisplayObject if found, or -1 otherwise
      */
     findChild = function (displayObject) {
         var dlLength = displayList.length;
@@ -34,8 +34,8 @@ function LcgDisplayObjectContainer() {
     /**
     * @public
     * Searches for a DisplayObject in the displayList
-    * @param   {DisplayObject}  The displayObject that will be searched for
-    * @return  {boolean}           True if the object is found, false otherwise
+    * @param   {DisplayObject}  displayObjectThe displayObject that will be searched for
+    * @return  {boolean}        True if the object is found, false otherwise
     */
     this.findChild = function (displayObject) {
 
@@ -54,7 +54,7 @@ function LcgDisplayObjectContainer() {
     /**
      * @public
      * Adds a DisplayObject to the displayList if it wasn't already there
-     * @param 	{DisplayObject} The displayObject to be added
+     * @param 	{DisplayObject} displayObject The displayObject to be added
      * @return 	{boolean}       True if the DisplayObject was added, false otherwise.
      */
     this.addChild = function (displayObject) {
@@ -69,8 +69,8 @@ function LcgDisplayObjectContainer() {
     /**
      * @public
      * Adds a DisplayObject to the displayList at a given position
-     * @param 	{DisplayObject} The displayObject to be added
-     * @param 	{int}    	    New index of the Display Object to be added in the display list
+     * @param 	{DisplayObject}     displayObject The displayObject to be added
+     * @param 	{int}    	    index New index of the Display Object to be added in the display list
      * @return 	{boolean} 	    True if the DisplayObject was added, false otherwise
      */
     this.addChildAt = function (displayObject, index) {
@@ -98,7 +98,6 @@ function LcgDisplayObjectContainer() {
      */
     this.removeChild = function (displayObject) {
 
-        var dlLength = displayList.length;
         var foundObjectAt = findChild(displayObject);
         if (foundObjectAt != -1) {
             displayList.splice(foundObjectAt, 1);

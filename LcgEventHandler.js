@@ -16,11 +16,9 @@ function LcgEventHandler() {
         if (!callbacks || callbacks.length == 0)
             return false;
 
-        for (var i = 0, l = callbacks.length; i < l; i++) {
+        for (var i = 0; i < callbacks.length; i++) {
             callbacks[i](eventObject[1]);
         }
-        ;
-
         return true;
     };
 

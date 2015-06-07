@@ -17,7 +17,7 @@ function LcgStage(canvas) {
     this.draw = function () {
         this.onEnterFrame();
         this.drawChildren(g, 0, 0, 1);
-    }
+    };
 
     /**
      * Frame function or Main Loop function
@@ -33,7 +33,7 @@ function LcgStage(canvas) {
 
     function eventClick(e) {
 
-        var event = [LCG_EVENT_CLICK, e]
+        var event = [LCG_EVENT_CLICK, e];
 
         _this.eventDispatcher(event, 0, 0);
     }

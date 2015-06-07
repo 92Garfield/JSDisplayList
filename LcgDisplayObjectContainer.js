@@ -35,7 +35,7 @@ function LcgDisplayObjectContainer() {
     * @public
     * Searches for a DisplayObject in the displayList
     * @param   {DisplayObject}  The displayObject that will be searched for
-    * @return  {bool}           True if the object is found, false otherwise
+    * @return  {boolean}           True if the object is found, false otherwise
     */
     this.findChild = function (displayObject) {
 
@@ -153,9 +153,9 @@ function LcgDisplayObjectContainer() {
      * @public
      * Calls the draws the children of this container and their children
      * @param 	{CanvasRenderingContext2D}  g The canvas context that will be used to draw
-     * @param 	{float}                     offsetX The X coordinate of the container
-     * @param 	{float}                     offsetY The Y coordinate of the container
-     * @param   {alph}                     product of all alpha so far
+     * @param 	{Number}                     offsetX The X coordinate of the container
+     * @param 	{Number}                     offsetY The Y coordinate of the container
+     * @param   {Number}                     alph Product of all alpha so far
      * @return 	{}
      */
     this.drawChildren = function (g, offsetX, offsetY, alph) {

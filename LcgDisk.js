@@ -9,9 +9,9 @@ function LcgDisk() {
     /**
      * Overloaded draw function, draws a disk of radius this.radius and color this.color on the screen
      *
-     * @param 	{g} 		The canvas context that will draw the text
-     * @param 	{offsetX} 	The X coordinate of the drawn text
-     * @param 	{offsetY} 	The Y coordinate of the drawn text
+     * @param 	{CanvasRenderingContext2D}  g The canvas context that will draw the text
+     * @param 	{Number}                    offsetX The X coordinate of the drawn text
+     * @param 	{Number}                    offsetY The Y coordinate of the drawn text
      * @return {}
      */
     this.draw = function (g, offsetX, offsetY) {

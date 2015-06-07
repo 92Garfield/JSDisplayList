@@ -31,8 +31,8 @@ function LcgImage(path) {
     /**
      * Draws the image at given position, with given crop and size.
      * @param 	{CanvasRenderingContext2D}  g The canvas context that will be used to draw
-     * @param 	{int}                       offsetX The X coordinate of the container
-     * @param 	{int}                       offsetY The Y coordinate of the container
+     * @param 	{Number}                       offsetX The X coordinate of the container
+     * @param 	{Number}                       offsetY The Y coordinate of the container
      * @return 	{}
      */
     this.draw = function (g, offsetX, offsetY) {
@@ -72,5 +72,6 @@ function LcgImage(path) {
             _this.width = _this.img.width;
             _this.height = _this.img.height;
         }
+        _this.dispatchEvent([LCG_EVENT_LOAD, e]);
     }
 }

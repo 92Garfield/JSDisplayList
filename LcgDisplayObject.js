@@ -30,11 +30,11 @@ function LcgDisplayObject() {
      * @public
      * @abstract
      * Abstract draw function
-     * @param 	{canvasContext} 	The canvas context that will be used to draw
-     * @param 	{float} 	        The X coordinate of the container
-     * @param 	{float} 	        The Y coordinate of the container
-     * @param   {float}             cumulative alpha so far
-     * @return 	{}                  product of all alpha so far
+     * @param 	{CanvasRenderingContext2D}  g   The canvas context that will be used to draw
+     * @param 	{Number}                    offsetX The X coordinate of the container
+     * @param 	{Number}                    offsetY The Y coordinate of the container
+     * @param   {Number}                    alph cumulative alpha so far
+     * @return 	{}
      */
     this.draw = function (g, offsetX, offsetY, alph) {
     };
@@ -44,9 +44,9 @@ function LcgDisplayObject() {
      * @abstract
      * THIS SHOULD NOT BE OVERLOADED!!!!! 
      * Empty function for conformity between this and DisplayObjectContainer
-     * @param   {canvasContext}     The canvas context that will be used to draw
-     * @param   {float}             The X coordinate of the container
-     * @param   {float}             The Y coordinate of the container
+     * @param   {CanvasRenderingContext2D}  g The canvas context that will be used to draw
+     * @param   {Number}                    offsetX The X coordinate of the container
+     * @param   {Number}                    offsetY The Y coordinate of the container
      * @return 	{}
      */
     this.drawChildren = function (g, offsetX, offsetY) {

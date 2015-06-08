@@ -32,6 +32,13 @@ function init() {
     var img = new LcgImage("QP.BMP");
     img.x = 200;
     img.y = 100;
+    img.alpha = .5;
+    stage.addChild(img);
+    
+    img = new LcgImage("QP.BMP");
+    img.x = 232;
+    img.y = 132;
+    img.alpha = .75;
     stage.addChild(img);
 
     img.addEventListener(LcgEvent.CLICK, function(e) {console.log("SUCCESS"); console.log(e);});

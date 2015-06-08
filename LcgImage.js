@@ -72,6 +72,6 @@ function LcgImage(path) {
             _this.width = _this.img.width;
             _this.height = _this.img.height;
         }
-        _this.dispatchEvent([LCG_EVENT_LOAD, e]);
+        _this.dispatchEvent(new LcgEvent(LcgEvent.LOAD, e));
     }
 }

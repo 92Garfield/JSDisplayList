@@ -191,12 +191,14 @@ function LcgDisplayObjectContainer() {
 
 
         // if the event is in range of this object's bounding box
-        if ( (event[1].clientX >= newOffsetX && event[1].clientX <= newOffsetX+this.width) && 
-             (event[1].clientY >= newOffsetY && event[1].clientY <= newOffsetY+this.height) )
+        if ( (event.clientX >= newOffsetX && event.clientX <= newOffsetX+this.width) && 
+             (event.clientY >= newOffsetY && event.clientY <= newOffsetY+this.height) )
         {
 
-            if (this.dispatchEvent(event))
+            if (this.dispatchEvent(event)) {
+                event.currentTarget = this;
                 return this;
+            }
         }
 
         return null;

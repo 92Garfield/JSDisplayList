@@ -32,10 +32,8 @@ function LcgStage(canvas) {
     }
 
     function eventClick(e) {
-
-        var event = [LCG_EVENT_CLICK, e];
-
-        _this.eventDispatcher(event, 0, 0);
+        console.log("Stage click: " + new LcgEvent(LcgEvent.CLICK, e).clientX);
+        _this.eventDispatcher(new LcgEvent(LcgEvent.CLICK, e), 0, 0);
     }
 
     var st = document.getElementById("stage");

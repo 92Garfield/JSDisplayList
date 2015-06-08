@@ -155,15 +155,16 @@ function LcgDisplayObjectContainer() {
      * @param 	{Number}                     offsetX The X coordinate of the container
      * @param 	{Number}                     offsetY The Y coordinate of the container
      * @param   {Number}                     alph Product of all alpha so far
-     * @return 	{}
+     * @return 	{void}
      */
     this.drawChildren = function (g, offsetX, offsetY, alph) {
 
         var dlLength = displayList.length;
         for (var i = 0; i < dlLength; i++) {
-
             displayList[i].onEnterFrame();
+            g.globalAlpha = alph * this.alpha * displayList[i].alpha;
             displayList[i].draw(g, offsetX, offsetY, this.alpha*alph);
+            g.globalAlpha = 1;
             displayList[i].drawChildren(g, offsetX + displayList[i].x, offsetY + displayList[i].y, this.alpha*alph);
         }
     };

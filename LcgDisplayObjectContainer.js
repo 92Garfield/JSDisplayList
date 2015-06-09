@@ -1,5 +1,3 @@
-// var LCG_EVENT_CLICK = new Event('LCG_EVENT_CLICK', { 'e': {clientX} });
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 // DisplayObjectContainer class, inherits from DisplayObject
 // Basically a DisplayObject with children

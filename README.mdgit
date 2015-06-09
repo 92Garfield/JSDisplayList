@@ -1,13 +1,25 @@
 # JSDisplayList  
 
 TODO:
+    Create packages
     DisplayObject
         applyFilter
     Events
-        onClick
-        onMouseDown
-        onMouseUp
-        onMouseMove
-    Text class improvements
-        font
-        size
+        click
+        mouseDown
+        mouseUp
+        mouseMove
+        mouseOver
+        mouseOut
+    Controls
+        Button
+        RadioButton
+        Checkbox
+        Slider
+        TextInput
+        TextArea
+        Scrollbar
+        ScrollPane
+        List
+        ComboBox
+        

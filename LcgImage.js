@@ -1,14 +1,15 @@
 function LcgImage(path) {
     LcgDisplayObjectContainer.call(this);
-
+    
     var _this = this;
-
     this.img = document.createElement("img");
     this.img.src = path;
+    
     this.img.addEventListener("load", doneLoading);
-
+    
     this.width = 0;
     this.height = 0;
+    this.finishedLoading = false;
     
     /**
      * Crop the image to cropArea
@@ -36,6 +37,7 @@ function LcgImage(path) {
      * @return 	{}
      */
     this.draw = function (g, offsetX, offsetY) {
+        if (!this.finishedLoading) return;
         var myX = offsetX + this.x;
         var myY = offsetY + this.y;
         if (this.crop) {
@@ -61,6 +63,7 @@ function LcgImage(path) {
      * @return 	{}
      */
     this.setPath = function(newPath) {
+        //this.finishedLoading = false;
         this.img.removeEventListener("load", doneLoading);
         this.img = document.createElement("img");
         this.img.src = newPath;
@@ -72,6 +75,9 @@ function LcgImage(path) {
             _this.width = _this.img.width;
             _this.height = _this.img.height;
         }
-        _this.dispatchEvent(new LcgEvent(LcgEvent.LOAD, e));
+        var loadEvent = new LcgEvent(LcgEvent.LOAD, e);
+        loadEvent.currentTarget = _this;
+        _this.dispatchEvent(loadEvent);
+        _this.finishedLoading = true;
     }
 }

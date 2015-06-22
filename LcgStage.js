@@ -35,8 +35,7 @@ function LcgStage(canvas) {
         _this.eventDispatcher(new LcgEvent(LcgEvent.CLICK, e), 0, 0);
     }
 
-    var st = document.getElementById("stage");
-    st.onclick = eventClick;
+    canvas.onclick = eventClick;
 
 
     // Calls the doFrame method for the first time during construction

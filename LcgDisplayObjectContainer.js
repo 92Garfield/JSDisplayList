@@ -29,6 +29,10 @@ function LcgDisplayObjectContainer() {
         return -1;
     };
 
+
+    this.emptyDisplayList = function() {
+        displayList = [];
+    };
     /**
     * @public
     * Searches for a DisplayObject in the displayList
@@ -79,8 +83,8 @@ function LcgDisplayObjectContainer() {
         if (this.findChild(displayObject))
             return false;
 
-        if (index < dlLength) {
-            displayList.splice(index, 1, displayObject);
+        if (index < displayList.length) {
+            displayList.splice(index, 0, displayObject);
         }
         else {
             displayList.push(displayObject);
@@ -95,11 +99,11 @@ function LcgDisplayObjectContainer() {
      * @return 	{boolean} 	True if the DisplayObject was removed, false otherwise
      */
     this.removeChild = function (displayObject) {
-
-        var foundObjectAt = findChild(displayObject);
-        if (foundObjectAt != -1) {
-            displayList.splice(foundObjectAt, 1);
-            return true;
+        for (var i = 0; i < displayList.length; i++) {
+            if (displayList[i] == displayObject) {
+                displayList.splice(i, 1);
+                return true;
+            }
         }
         return false;
     };
@@ -114,8 +118,8 @@ function LcgDisplayObjectContainer() {
 
         if (index < 0 || index >= displayList.length) {
             return false;
-        }
-        else {
+        } else {
+            displayList.splice(index, 1);
             return true;
         }
     };

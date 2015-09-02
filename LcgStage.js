@@ -26,7 +26,7 @@ function LcgStage(canvas) {
      * @return {}
      */
     function doFrame() {
-        g.clearRect(0, 0, canvas.height, canvas.width);
+        g.clearRect(0, 0, canvas.width, canvas.height);
         _this.draw();
         setTimeout(doFrame, 1000 / frameRate);
     }

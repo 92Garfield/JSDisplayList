@@ -36,7 +36,7 @@ function LcgDisplayObjectContainer() {
     /**
     * @public
     * Searches for a DisplayObject in the displayList
-    * @param   {DisplayObject}  displayObjectThe displayObject that will be searched for
+    * @param   {DisplayObject}  displayObject The displayObject that will be searched for
     * @return  {boolean}        True if the object is found, false otherwise
     */
     this.findChild = function (displayObject) {
@@ -162,13 +162,25 @@ function LcgDisplayObjectContainer() {
     this.drawChildren = function (g, offsetX, offsetY, alph) {
 
         var dlLength = displayList.length;
+        
+        g.translate(this.x, this.y);
         for (var i = 0; i < dlLength; i++) {
             displayList[i].onEnterFrame();
             g.globalAlpha = alph * this.alpha * displayList[i].alpha;
-            displayList[i].draw(g, offsetX, offsetY, this.alpha*alph);
+            
+            g.translate(displayList[i].x, displayList[i].y);
+            g.rotate(displayList[i].rotation);
+
+            displayList[i].draw(g, 0, 0, this.alpha*alph);
+            
+            g.rotate(-displayList[i].rotation);
+            g.translate(-displayList[i].x, -displayList[i].y);
+            
             g.globalAlpha = 1;
+            
             displayList[i].drawChildren(g, offsetX + displayList[i].x, offsetY + displayList[i].y, this.alpha*alph);
         }
+        g.translate(-this.x, -this.y);
     };
 
 

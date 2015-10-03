@@ -15,11 +15,9 @@ function LcgDisk() {
      * @return {}
      */
     this.draw = function (g, offsetX, offsetY) {
-        var myX = offsetX + this.x;
-        var myY = offsetY + this.y;
         g.fillStyle = '#000000';
         g.beginPath();
-        g.arc(myX, myY, this.radius, 0, Math.PI * 2);
+        g.arc(0, 0, this.radius, 0, Math.PI * 2);
         g.fillStyle = this.color;
         g.fill();
         g.fillStyle = this.color;

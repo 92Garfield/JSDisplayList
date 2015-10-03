@@ -16,9 +16,9 @@ function LcgText() {
      * @param 	{int}                       offsetY The Y coordinate of the drawn text
      * @return 	{}
      */
-    this.draw = function (g, offsetX, offsetY) {
-        var myX = offsetX + this.x;
-        var myY = offsetY + this.y;
+    this.draw = function (g) {
+        var myX = 0;
+        var myY = 0;
         g.font = this.size + "px " + this.font;
         g.fillStyle = this.color;
         g.fillText(this.text, myX, myY);

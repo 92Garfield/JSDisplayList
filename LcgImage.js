@@ -38,8 +38,8 @@ function LcgImage(path) {
      */
     this.draw = function (g, offsetX, offsetY) {
         if (!this.finishedLoading) return;
-        var myX = offsetX + this.x;
-        var myY = offsetY + this.y;
+        var myX = 0;
+        var myY = 0;
         if (this.crop) {
             g.drawImage(this.img,
                     this.cropArea.x, this.cropArea.y, this.cropArea.width, this.cropArea.height,

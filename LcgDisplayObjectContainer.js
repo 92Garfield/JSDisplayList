@@ -167,18 +167,18 @@ function LcgDisplayObjectContainer() {
         for (var i = 0; i < dlLength; i++) {
             displayList[i].onEnterFrame();
             g.globalAlpha = alph * this.alpha * displayList[i].alpha;
-            
-            g.translate(displayList[i].x, displayList[i].y);
+
             g.rotate(displayList[i].rotation);
+            g.translate(displayList[i].x, displayList[i].y);
 
             displayList[i].draw(g, 0, 0, this.alpha*alph);
-            
-            g.rotate(-displayList[i].rotation);
+            displayList[i].drawChildren(g, offsetX + displayList[i].x, offsetY + displayList[i].y, this.alpha*alph);
+
             g.translate(-displayList[i].x, -displayList[i].y);
-            
+            g.rotate(-displayList[i].rotation);
+                        
             g.globalAlpha = 1;
             
-            displayList[i].drawChildren(g, offsetX + displayList[i].x, offsetY + displayList[i].y, this.alpha*alph);
         }
         g.translate(-this.x, -this.y);
     };

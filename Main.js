@@ -41,5 +41,13 @@ function init() {
     img.alpha = .75;
     stage.addChild(img);
 
+    rect = new LcgRect();
+    rect.x = 110;
+    rect.y = 100;
+    rect.height = 100;
+    rect.width=5;
+    rect.color = "blue";
+    stage.addChild(rect);
+
     img.addEventListener(LcgEvent.CLICK, function(e) {console.log("SUCCESS"); console.log(e);});
 }
